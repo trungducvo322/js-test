@@ -37,9 +37,7 @@ const animated = (sections) => {
       if ( activing.getBoundingClientRect().top  < window.innerHeight ) {
         
         activing.classList.remove('is-activing')
-        activing.classList.add('is-actived')
-        console.log( window.innerHeight);
-        
+        activing.classList.add('is-actived')        
       }
     }
 
@@ -49,7 +47,5 @@ const animated = (sections) => {
 
 for await (const time of nextFrame(2)) {
   animated(animatedSection)
-  // console.log(1111);
-
 }
 
