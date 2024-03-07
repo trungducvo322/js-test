@@ -160,3 +160,81 @@ svg {
       opacity: 1;
     }
   }
+
+  .c-faqlist {
+    &-item {
+      &__title {
+        position: relative;
+        padding: 30px 70px;
+        border-bottom: 1px solid #000;
+        cursor: pointer;
+        
+        &::before,
+        &::after {
+          content: '';
+          right: 15px;
+          top: 50%;
+          position: absolute;
+          width: 30px;
+          height: 1px;
+          background-color: #fff;
+          transition: transform 0.3s ease;
+        }
+      
+        &::after {
+          transform: rotate(-90deg);
+        }
+
+        &.is-active {
+          &::after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      &__description {
+        padding: 30px 0 30px 70px;
+      }
+    }
+
+    &-child {
+      padding-left: 60px;
+
+      &__title {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .c-table1 {
+    width: 100%;
+    &-item {
+      display: flex;
+      width: 100%;
+
+      & + & {
+        margin-top: -1px;
+      }
+    }
+    dl {
+
+    }
+
+    dt,
+    dd {
+      padding: 30px 0;
+    }
+
+    dt {
+      width: 200px;
+      flex-shrink: 0;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
+    dd {
+      flex-grow: 1;
+      border-top: 1px solid #e4e4e4;
+      border-bottom: 1px solid #e4e4e4;
+    }
+  }

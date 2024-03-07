@@ -61,3 +61,7 @@ $(".slider").slick({
   }
 });
   
+$('.js-slidedown-toggle').on('click touch', function (){
+  $(this).toggleClass('is-active');
+  $(this).siblings().slideToggle( );
+})
